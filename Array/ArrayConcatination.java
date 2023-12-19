@@ -1,4 +1,4 @@
-//Write a program in C to merge two arrays of the same size sorted in descending order.
+//Write a program in java to merge two arrays of the same size sorted in descending order.
 package array;
 import java.util.Scanner;
 public class ArrayConcatination {
@@ -37,33 +37,19 @@ public class ArrayConcatination {
 		{
 			System.out.print(arr3[i]+" ");
 		}
-		for(i=0;i<2*size-1;i++)
+		for(i=0;i<arr3.length-1;i++)
 		{
-			for(j=0;j<2*size-i-1;j++)
+			for(j=0;j<arr3.length-i-1;j++)
 			{
 				if(arr3[j]<arr3[j+1])
 				{
-					temp=arr3[i];
+					temp=arr3[j];
 					arr3[j]=arr3[j+1];
 					arr3[j+1]=temp;
 				}
 			}
 		}
-		/*
-		   for(i=0;i<s3; i++)
-        {
-           for(k=0;k<s3-1;k++)
-             {
-         
-                if(arr3[k]<=arr3[k+1])
-                 {
-                   j=arr3[k+1];
-                   arr3[k+1]=arr3[k];
-                   arr3[k]=j;
-                 }  
-              }
-         } 
-		 */
+	
 		System.out.println();
 		for(i=0;i<size*2;i++)
 		{
