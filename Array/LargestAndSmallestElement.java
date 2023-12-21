@@ -28,12 +28,9 @@ public class LargestAndSmallestElement {
 				}
 			}
 		}
-		for(i=0;i<arr.length;i++)
-		{
-			System.out.print(arr[i]+" ");
-		}
+
 		System.out.println("largest element="+arr[0]);
-		System.out.println("largest element="+arr[arr.length]);
+		System.out.println("smallest element="+arr[n]);
 	}
 
 }
