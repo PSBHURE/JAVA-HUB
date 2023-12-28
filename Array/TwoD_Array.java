@@ -30,7 +30,9 @@ public class TwoD_Array {
 			System.out.println();
 		}
 		
-
+		System.out.println("THANK YOU");
 	}
 
 }
+
+
