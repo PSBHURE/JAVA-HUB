@@ -9,6 +9,8 @@ public class CountWords
 	{	
 		String s=str.trim();
 		char[] arr=s.toCharArray();
+		if(arr==null)
+			return 0;
 		int start=0,count=0;
 		for(int i=0;i<arr.length-1;i++)
 		{
