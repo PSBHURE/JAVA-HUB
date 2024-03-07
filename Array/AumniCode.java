@@ -31,6 +31,7 @@ public class AumniCode
 			else
 			break;
 		}
+		System.out.println("count="+count+"\n");
 /*STEP-2:create new array (name as "arr1") whose size is as per "count" variable beacause it has count how many
 		 +ve no comes before 1st -ve no in an given "arr"*/
 		int[] arr1=new int[count];
