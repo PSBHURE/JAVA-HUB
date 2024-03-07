@@ -2,16 +2,28 @@ public class ReverseStringWithSpaces
 {
 	public static void main(String[] args)
 	{
-		String str="DIVYANI";//"BHEDRA";//"MRUNALI";//"PRATIK";//"www.w3resource.com";
-		System.out.print("your reverse string with spaces=>"+ReverseString(str));
+			String str="www.w3resource.com";
+			System.out.printf(StringReversing(str));
 	}
-	public static String ReverseString(String str)
+	public static String StringReversing(String str)
 	{
-		StringBuffer str1=new StringBuffer();
-		for(int i=str.length()-1;i>=0;i--)
-		{
-				str1.append(str.charAt(i)).append(" ");
-		}
-		return str1.toString();
+			char[] arr=str.toCharArray();
+			StringBuffer s=new StringBuffer();
+			int start=0;
+			int end=arr.length-1;
+			char temp='a';
+			while(start<end)
+			{
+					temp=arr[start];
+					arr[start]=arr[end];
+					arr[end]=temp;
+					start++;
+					end--;
+			}
+			for(char j:arr)
+			{
+					s.append(j).append(" ");
+			}
+			return String.valueOf(s);
 	}
 }
