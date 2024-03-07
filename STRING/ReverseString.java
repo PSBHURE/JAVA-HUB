@@ -2,22 +2,21 @@ public class ReverseString
 {
 	public static void main(String[] args)
 	{
-		String str="w3resource.com";
-		System.out.print("your reverse string=>"+StringReverse(str));
+		String str="www.w3resource.com";
+		System.out.println(StringReverse(str));
 	}
-		
 	public static String StringReverse(String str)
 	{
 		char[] arr=str.toCharArray();
-		int begin=0;
+		int start=0;
 		int end=arr.length-1;
 		char temp='a';
-		while(end>begin)
+		while(start<end)
 		{
-		temp=arr[begin];
-		arr[begin]=arr[end];
+		temp=arr[start];
+		arr[start]=arr[end];
 		arr[end]=temp;
-		begin++;
+		start++;
 		end--;		
 		}
 		return String.valueOf(arr);
