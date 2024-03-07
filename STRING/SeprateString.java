@@ -2,16 +2,17 @@ public class SeprateString
 {
 	public static void main(String[] args)
 	{
-		String str="w3resource.com";
-		StringSepration(str);
+		String str="www.w3resource.com";
+		System.out.print(StringSepration(str));
 	}
-	public static void StringSepration(String str)
+	public static String StringSepration(String str)
 	{
-		char[] arr=str.toCharArray();
-		for(int i=0;i<arr.length;i++)
-		{
-		System.out.print(arr[i]+" ");
-		}
-	
+			char[] arr=str.toCharArray();
+			StringBuffer s=new StringBuffer();
+			for(char i:arr)
+			{
+					s.append(i).append(" ");
+			}
+			return String.valueOf(s);
 	}
 }
