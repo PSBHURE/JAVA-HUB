@@ -2,7 +2,7 @@ public class TwoSumCode
 {
 	public static void main(String[] args)
 	{
-		int arr[]={-3,2,3,3,6,8,15};
+		int arr[]={-3,1,2,3,3,8,15};
 		int target=6;
 		int arr1[]=Two_Sum(arr,target);
 		for(int i=0;i<arr1.length;i++)
