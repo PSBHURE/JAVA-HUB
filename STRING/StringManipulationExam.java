@@ -14,7 +14,7 @@ public class StringManipulationExam
 		{
 			if((arr[i]>='a'&&arr[i]<='z')||(arr[i]>='A'&&arr[i]<='Z'))
 			{
-				base=Character.isLowerCase(arr[i])?'a':'A';
+				 base=Character.isLowerCase(arr[i])?'a':'A';
 				arr[i]=(char)(base+(arr[i]-base+shift)%26);
 			}
 		}
