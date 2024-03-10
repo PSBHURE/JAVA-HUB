@@ -4,10 +4,10 @@ public class HighestFrequencyCharacter
 	public static void main(String[] args)
 	{
 		String str="Welcome to w3resource.com.";
-		Map<Character,Integer>frequecy=MaxOccurChar(str);
-		for(Map.Entry<Character,Integer>freq:frequecy.entrySet())
+		Map<Character,Integer> map=MaxOccurChar(str);
+		for(Map.Entry<Character,Integer>entry:map.entrySet())
 		{
-			System.out.println(freq.getKey()+"->"+freq.getValue());
+			System.out.println(entry.getKey()+"->"+entry.getValue());
 		}
 	}
 	public static Map<Character,Integer> MaxOccurChar(String str)
@@ -16,21 +16,22 @@ public class HighestFrequencyCharacter
 		Map<Character,Integer>map=new HashMap<>();
 		for(char ch:arr)
 		{
-			if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
-				map.put(ch,map.getOrDefault(ch,0)+1);
+			if(ch!=' ')
+			map.put(ch,map.getOrDefault(ch,0)+1);
 		}
-		char maxchar='\0';
 		int max=0;
-		for(Map.Entry<Character,Integer>check:map.entrySet())
+		char cmax='\0';
+		Map<Character,Integer>complete=new HashMap<>();
+		for(Map.Entry<Character,Integer>entry:map.entrySet())
 		{
-			if(check.getValue()>max)
+			if(entry.getValue()>max)
 			{
-				max=check.getValue();
-				maxchar=check.getKey();
+				max=entry.getValue();
+				cmax=entry.getKey();
 			}
 		}
-		Map<Character,Integer>finish=new HashMap<>();
-		finish.put(maxchar,max);
-		return finish;
+		complete.put(cmax,max);
+		return complete;
 	}
+	
 }
