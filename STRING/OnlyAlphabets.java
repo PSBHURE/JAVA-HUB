@@ -8,25 +8,18 @@ public class OnlyAlphabets
 	public static String ONLYALPHABETS(String str)
 	{
 		char[] arr=str.toCharArray();
-		ArrayList<Character>list=new ArrayList<>();
-		for(int j=0;j<arr.length;j++)
+		List<Character>list=new ArrayList();
+		for(int i=0;i<arr.length;i++)
 		{
-			list.add(arr[j]);
-		}
-		
-		for(int w=0;w<list.size();w++)
-		{
-			if((list.get(w)>='a'&&list.get(w)<='z')||(list.get(w)>='A'&&list.get(w)<='Z'))
+			if((arr[i]>='a'&&arr[i]<='z')||(arr[i]>='A'&&arr[i]<='Z'))
 			{
-			
+				list.add(arr[i]);
 			}
-			else
-			 list.remove(list.get(w));
 		}
 		char[] arr1=new char[list.size()];
-		for(int z=0;z<list.size();z++)
+		for(int i=0;i<list.size();i++)
 		{
-			arr1[z]=list.get(z);
+			arr1[i]=list.get(i);
 		}
 		return String.valueOf(arr1);
 	}
