@@ -4,7 +4,7 @@ public class LargestWordInString
 	{
 		String str="It is a string with smallest and largest word.";
 		int[] arr=LargestAndSmallestWordsInString(str);
-		System.out.print("max length="+arr[0]+" "+"min length="+arr[1]);
+		System.out.print("max length="+arr[0]+" , "+"min length="+arr[1]);
 	}
 	public static int[] LargestAndSmallestWordsInString(String str)
 	{
