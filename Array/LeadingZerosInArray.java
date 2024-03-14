@@ -33,15 +33,4 @@ public class LeadingZerosInArray
 	}
 }
 
-	/*int left=0,right=0,temp=0;
-		while(right<arr.length)
-		{
-			if(arr[right]!=0)
-			{
-			  temp=arr[left];
-			  arr[left]=arr[right];
-			  arr[right]=temp;
-			  left++;
-			}
-			right++;
-		}*/
+	
