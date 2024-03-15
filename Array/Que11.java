@@ -14,7 +14,7 @@ public class Que11
 	}
 	public static int[] ArrayReverse(int[] arr)
 	{
-		int temp=0;
+		/*int temp=0;
 		int start=0;
 		int end=arr.length-1;
 		while(start<end)
@@ -25,6 +25,13 @@ public class Que11
 			start++;
 			end--;
 		}
-		return arr;
+		return arr*/
+		int[] arr1=new int[arr.length];
+		for(int i=arr.length-1;i>=0;i--)
+		{
+			arr1[arr.length-1-i]=arr[i];
+			
+		}
+		return arr1;
 	}
 }
