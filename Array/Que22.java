@@ -25,9 +25,7 @@ import java.util.*;
 			start++;
 			if(sum==target)
 			{
-				/*list.add(String.valueOf(arr[start]));
-				list.add(",");
-				list.add(String.valueOf(arr[end]));*/
+				
 				
 				list.add(String.valueOf(arr[start])+(",")+(String.valueOf(arr[end])));
 				end--;
