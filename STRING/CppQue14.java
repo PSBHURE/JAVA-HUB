@@ -3,7 +3,7 @@
 Example:
 Sample Input: w3resource from 2008
 Sample Output: Sum of the numbers: 2011*/
-/*
+
 import java.util.*;
 public class CppQue14
 {
@@ -14,41 +14,32 @@ public class CppQue14
 	}
 	public static int check(String s)
 	{
-		List<String>list=new ArrayList<>();
 		char[] arr=s.toCharArray();
 		StringBuffer temp=new StringBuffer();
+		List<String> list=new ArrayList<>();
 		for(int i=0;i<arr.length;i++)
 		{
-			int j=i+1;
-			while((arr[i]>=48 && arr[i]<=57)&&(arr[j]>=48 && arr[j]<=57))
+			char ch1=arr[i];
+			if(Character.isDigit(ch1))
+			{temp.append(ch1);
+			while(i+1<arr.length && Character.isDigit(arr[i+1]))
 			{
-				temp.append(arr[i]);
-				if(i<arr.length-1)
+				temp.append(arr[i+1]);
 				i++;
-			else
-				break;
-				
 			}
-			list.add(new String(temp));
-			temp.delete(0,temp.length());
-			if((arr[i]>=48 && arr[i]<=57)&&(arr[j]<48 || arr[j]>57))
-			{
-	
-				temp.append(arr[i]);
-			}
-			list.add(new String(temp));
-			temp.delete(0,temp.length());
+			list.add(temp.toString());
+			temp.setLength(0);}
 		}
 		int sum=0;
-		for(String ch:list)
+		for(String x:list)
 		{
-			sum+=Integer.parseInt(ch);
+			sum=sum+Integer.parseInt(x);
 		}
-		return sum;	
+		return sum;
 	}
-}*/
+}
 
-import java.util.*;
+/*import java.util.*;
 
 public class CppQue14 {
     public static void main(String[] args) {
@@ -79,4 +70,4 @@ public class CppQue14 {
         }
         return sum;
     }
-}
+}*/
