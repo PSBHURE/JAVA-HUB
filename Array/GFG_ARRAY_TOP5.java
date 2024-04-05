@@ -14,7 +14,7 @@ public class GFG_ARRAY_TOP5
 	}
 	public static int[] check(int[] arr,int k)
 	{
-		
+		Arrays.sort(arr);
 		int[] arr1=new int[2];
 		arr1[0]=arr[k-1];
 		arr1[1]=arr[arr.length-k];
