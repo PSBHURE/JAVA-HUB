@@ -19,5 +19,6 @@ public class GFG_ARRAY_TOP5
 		arr1[0]=arr[k-1];
 		arr1[1]=arr[arr.length-k];
 		return arr1;
+		
 	}
 }
